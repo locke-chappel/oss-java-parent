@@ -52,9 +52,9 @@
         <org.seleniumhq.selenium.htmlunit-driver.version>4.5.2</org.seleniumhq.selenium.htmlunit-driver.version>
         <!-- slf4j 2.x requires changes and likely Spring support -->
         <org.slf4j.verion>1.7.36</org.slf4j.verion>
-        <org.springframework.version>5.3.23</org.springframework.version>
-        <org.springframework.boot.version>2.7.5</org.springframework.boot.version>
-        <org.springframework.security.version>5.7.5</org.springframework.security.version>
+        <org.springframework.version>5.3.24</org.springframework.version>
+        <org.springframework.boot.version>2.7.6</org.springframework.boot.version>
+        <org.springframework.security.version>5.8.0</org.springframework.security.version>
 
         <!-- Plugin Versions -->
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>

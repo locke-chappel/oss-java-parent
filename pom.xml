@@ -32,7 +32,6 @@
         <com.h2database.version>2.1.214</com.h2database.version>
         <com.pi4j.version>2.2.1</com.pi4j.version>
         <com.yahoo.platform.yui.version>2.4.8</com.yahoo.platform.yui.version>
-        <jakarta.mail.jakarta.mail-api.version>2.1.0</jakarta.mail.jakarta.mail-api.version>
         <javax.servlet.version>4.0.1</javax.servlet.version>
         <org.apache.commons.version>3.12.0</org.apache.commons.version>
         <!-- Can't upgrade to httpclient5 until Spring adds support -->

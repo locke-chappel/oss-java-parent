@@ -23,8 +23,8 @@
         <com.github.lc.oss.owasp.version>1.0.0</com.github.lc.oss.owasp.version>
         
         <!-- Dependency Versions  -->
-        <com.fasterxml.jackson.version>2.14.0</com.fasterxml.jackson.version>
-        <com.github.mwiede.jsch.version>0.2.4</com.github.mwiede.jsch.version>
+        <com.fasterxml.jackson.version>2.14.1</com.fasterxml.jackson.version>
+        <com.github.mwiede.jsch.version>0.2.5</com.github.mwiede.jsch.version>
         <com.google.javascript.version>v20220719</com.google.javascript.version>
         <com.h2database.version>2.1.214</com.h2database.version>
         <com.pi4j.version>2.2.1</com.pi4j.version>
@@ -32,22 +32,22 @@
         <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
         <org.apache.commons.version>3.12.0</org.apache.commons.version>
         <org.apache.httpcomponents.version>5.2</org.apache.httpcomponents.version>
-        <org.aspectj.version>1.9.9.1</org.aspectj.version>
+        <org.aspectj.version>1.9.19</org.aspectj.version>
         <org.eclipse.angus.jakarta.mail.version>1.0.0</org.eclipse.angus.jakarta.mail.version>
         <org.glassfish.jaxb.version>4.0.1</org.glassfish.jaxb.version>
         <org.graalvm.js.version>22.3.0</org.graalvm.js.version>
-        <org.hibernate.version>6.1.5.Final</org.hibernate.version>
+        <org.hibernate.version>6.1.6.Final</org.hibernate.version>
         <org.hibernate.validator.version>8.0.0.Final</org.hibernate.validator.version>
         <org.junit.jupiter.version>5.9.1</org.junit.jupiter.version>
-        <org.mockito.version>4.8.1</org.mockito.version>
+        <org.mockito.version>4.11.0</org.mockito.version>
         <org.openjfx.version>17.0.2</org.openjfx.version>
         <org.quartz-scheduler.version>2.3.2</org.quartz-scheduler.version>
-        <org.seleniumhq.selenium.version>4.5.3</org.seleniumhq.selenium.version>
-        <org.seleniumhq.selenium.htmlunit-driver.version>4.5.2</org.seleniumhq.selenium.htmlunit-driver.version>
-        <org.slf4j.verion>2.0.5</org.slf4j.verion>
-        <org.springframework.version>6.0.2</org.springframework.version>
-        <org.springframework.boot.version>3.0.0</org.springframework.boot.version>
-        <org.springframework.security.version>6.0.0</org.springframework.security.version>
+        <org.seleniumhq.selenium.version>4.7.2</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.htmlunit-driver.version>4.7.2</org.seleniumhq.selenium.htmlunit-driver.version>
+        <org.slf4j.verion>2.0.6</org.slf4j.verion>
+        <org.springframework.version>6.0.3</org.springframework.version>
+        <org.springframework.boot.version>3.0.1</org.springframework.boot.version>
+        <org.springframework.security.version>6.0.1</org.springframework.security.version>
 
         <!-- Plugin Versions -->
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>

@@ -53,20 +53,21 @@
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
         <maven-clean-plugin.version>3.2.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-        <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
+        <maven-dependency-plugin.version>3.4.0</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
         <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
-        <maven-install-plugin.version>3.0.1</maven-install-plugin.version>
+        <maven-install-plugin.version>3.1.0</maven-install-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <maven-release-plugin.version>3.0.0-M6</maven-release-plugin.version>
+        <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
+        <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-        <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
-        <org.cyclonedx.cyclonedx-maven-plugin.version>2.7.1</org.cyclonedx.cyclonedx-maven-plugin.version>
-        <org.jacoco.jacoco-maven-plugin.version>0.8.8</org.jacoco.jacoco-maven-plugin.version>
-        <org.ow2.asm.version>9.3</org.ow2.asm.version>
-        <org.owasp.dependency-check-maven.version>7.3.0</org.owasp.dependency-check-maven.version>
+        <org.cyclonedx.cyclonedx-maven-plugin.version>2.7.4</org.cyclonedx.cyclonedx-maven-plugin.version>
         <org.eclipse.m2e.lifecycle-mapping.version>1.0.0</org.eclipse.m2e.lifecycle-mapping.version>
+        <org.graalvm.buildtools.native-build-tools-plugin.version>0.9.19</org.graalvm.buildtools.native-build-tools-plugin.version>
+        <org.jacoco.jacoco-maven-plugin.version>0.8.8</org.jacoco.jacoco-maven-plugin.version>
+        <org.ow2.asm.version>9.4</org.ow2.asm.version>
+        <org.owasp.dependency-check-maven.version>7.4.3</org.owasp.dependency-check-maven.version>
         
         <!-- Configuration -->
         <testing.skip.it>true</testing.skip.it>
@@ -212,6 +213,22 @@
                     <version>${org.cyclonedx.cyclonedx-maven-plugin.version}</version>
                 </plugin>
 
+                <plugin>
+                    <groupId>org.graalvm.buildtools</groupId>
+                    <artifactId>native-maven-plugin</artifactId>
+                    <version>${org.graalvm.buildtools.native-build-tools-plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <skipNativeTests>true</skipNativeTests>
+                        <buildArgs>
+                            <buildArg>--no-fallback</buildArg>
+                            <buildArg>--no-server</buildArg>
+                            <buildArg>--verbose</buildArg>
+                            <buildArg>-J-Xmx3G</buildArg>
+                        </buildArgs>
+                    </configuration>
+                </plugin>
+                
                 <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
@@ -271,4 +288,105 @@
             </plugin>
         </plugins>
     </build>
+    
+    <profiles>
+        <profile>
+            <id>native</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <configuration>
+                            <image>
+                                <builder>paketobuildpacks/builder:tiny</builder>
+                                <env>
+                                    <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+                                </env>
+                            </image>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>process-aot</id>
+                                <goals>
+                                    <goal>process-aot</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <configuration>
+                            <classesDirectory>${project.build.outputDirectory}</classesDirectory>
+                            <metadataRepository>
+                                <enabled>true</enabled>
+                            </metadataRepository>
+                            <requiredVersion>22.3</requiredVersion>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>add-reachability-metadata</id>
+                                <goals>
+                                    <goal>add-reachability-metadata</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>build-native</id>
+                                <goals>
+                                    <goal>compile-no-fork</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>nativeTest</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.junit.platform</groupId>
+                    <artifactId>junit-platform-launcher</artifactId>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>process-test-aot</id>
+                                <goals>
+                                    <goal>process-test-aot</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <configuration>
+                            <classesDirectory>${project.build.outputDirectory}</classesDirectory>
+                            <metadataRepository>
+                                <enabled>true</enabled>
+                            </metadataRepository>
+                            <requiredVersion>22.3</requiredVersion>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>native-test</id>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

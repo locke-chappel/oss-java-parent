@@ -3,13 +3,38 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.lc.oss</groupId>
+    <groupId>com.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
     <name>OSS Parent POM</name>
+    <description>Parent POM for all com.github.locke-chappel.oss projects</description>
     <url>https://github.com/locke-chappel/oss-parent</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>locke-chappel</id>
+            <name>Locke-Chappel</name>
+        </developer>
+    </developers>
+  
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/locke-chappel/oss-parent/issues</url>
+    </issueManagement>
+    
+    <scm>
+        <connection>scm:git:git://github.com/locke-chappel/oss-parent.git</connection>
+        <developerConnection>scm:git:ssh://github.com:locke-chappel/oss-parent.git</developerConnection>
+        <url>https://github.com/locke-chappel/oss-parent</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +43,7 @@
         <maven.compiler.target>${java.min.version}</maven.compiler.target>
         <maven.compiler.source>${java.min.version}</maven.compiler.source>
 
-        <!-- com.github.lc.oss -->
+        <!-- com.github.locke-chappel.oss -->
         <com.github.lc.oss.commons.bom.version>1.0.0</com.github.lc.oss.commons.bom.version>
         <com.github.lc.oss.owasp.version>1.0.0</com.github.lc.oss.owasp.version>
         
@@ -58,6 +83,7 @@
         <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
         <maven-install-plugin.version>3.1.0</maven-install-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+        <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
         <maven-release-plugin.version>3.0.0-M7</maven-release-plugin.version>
         <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
@@ -156,6 +182,10 @@
                     <version>${maven-jar-plugin.version}</version>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-release-plugin</artifactId>
                     <version>${maven-release-plugin.version}</version>
                 </plugin>
@@ -201,7 +231,7 @@
                     </executions>
                     <dependencies>
                         <dependency>
-                            <groupId>com.github.lc.oss</groupId>
+                            <groupId>com.github.locke-chappel.oss</groupId>
                             <artifactId>owasp</artifactId>
                             <version>${com.github.lc.oss.owasp.version}</version>
                         </dependency>

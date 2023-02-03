@@ -288,6 +288,9 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <configuration>
                     <argLine>${JacocoArgs}</argLine>

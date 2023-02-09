@@ -93,7 +93,7 @@
         <org.graalvm.buildtools.native-build-tools-plugin.version>0.9.19</org.graalvm.buildtools.native-build-tools-plugin.version>
         <org.jacoco.jacoco-maven-plugin.version>0.8.8</org.jacoco.jacoco-maven-plugin.version>
         <org.ow2.asm.version>9.4</org.ow2.asm.version>
-        <org.owasp.dependency-check-maven.version>7.4.4</org.owasp.dependency-check-maven.version>
+        <org.owasp.dependency-check-maven.version>8.0.2</org.owasp.dependency-check-maven.version>
         
         <!-- Configuration -->
         <testing.skip.it>true</testing.skip.it>

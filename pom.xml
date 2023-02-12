@@ -5,7 +5,7 @@
 
     <groupId>com.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all com.github.locke-chappel.oss projects</description>

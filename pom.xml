@@ -24,12 +24,12 @@
             <name>Locke-Chappel</name>
         </developer>
     </developers>
-  
+
     <issueManagement>
         <system>GitHub</system>
         <url>https://github.com/locke-chappel/oss-parent/issues</url>
     </issueManagement>
-    
+
     <scm>
         <connection>scm:git:git://github.com/locke-chappel/oss-parent.git</connection>
         <developerConnection>scm:git:ssh://github.com:locke-chappel/oss-parent.git</developerConnection>
@@ -46,8 +46,8 @@
         <!-- com.github.locke-chappel.oss -->
         <com.github.lc.oss.commons.bom.version>1.0.0</com.github.lc.oss.commons.bom.version>
         <com.github.lc.oss.owasp.version>1.0.0</com.github.lc.oss.owasp.version>
-        
-        <!-- Dependency Versions  -->
+
+        <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.14.1</com.fasterxml.jackson.version>
         <com.github.mwiede.jsch.version>0.2.5</com.github.mwiede.jsch.version>
         <com.google.javascript.version>v20220719</com.google.javascript.version>
@@ -81,6 +81,7 @@
         <maven-dependency-plugin.version>3.4.0</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
         <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
+        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <maven-install-plugin.version>3.1.0</maven-install-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
@@ -94,7 +95,7 @@
         <org.jacoco.jacoco-maven-plugin.version>0.8.8</org.jacoco.jacoco-maven-plugin.version>
         <org.ow2.asm.version>9.4</org.ow2.asm.version>
         <org.owasp.dependency-check-maven.version>8.0.2</org.owasp.dependency-check-maven.version>
-        
+
         <!-- Configuration -->
         <testing.skip.it>true</testing.skip.it>
     </properties>
@@ -172,6 +173,23 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${maven-gpg-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <keyname>${gpg.keyname}</keyname>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
@@ -298,6 +316,9 @@
                 </configuration>
             </plugin>
             <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <argLine>${JacocoArgs}</argLine>
@@ -321,7 +342,7 @@
             </plugin>
         </plugins>
     </build>
-    
+
     <profiles>
         <profile>
             <id>native</id>

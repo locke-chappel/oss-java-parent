@@ -3,12 +3,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.locke-chappel.oss</groupId>
+    <groupId>io.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
-    <description>Parent POM for all com.github.locke-chappel.oss projects</description>
+    <description>Parent POM for all io.github.locke-chappel.oss projects</description>
     <url>https://github.com/locke-chappel/oss-parent</url>
 
     <licenses>
@@ -43,9 +43,9 @@
         <maven.compiler.target>${java.min.version}</maven.compiler.target>
         <maven.compiler.source>${java.min.version}</maven.compiler.source>
 
-        <!-- com.github.locke-chappel.oss -->
-        <com.github.lc.oss.commons.bom.version>1.0.0</com.github.lc.oss.commons.bom.version>
-        <com.github.lc.oss.owasp.version>1.0.0</com.github.lc.oss.owasp.version>
+        <!-- io.github.locke-chappel.oss -->
+        <io.github.lc.oss.commons.bom.version>1.0.0</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.0</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.14.1</com.fasterxml.jackson.version>
@@ -249,9 +249,9 @@
                     </executions>
                     <dependencies>
                         <dependency>
-                            <groupId>com.github.locke-chappel.oss</groupId>
+                            <groupId>io.github.locke-chappel.oss</groupId>
                             <artifactId>owasp</artifactId>
-                            <version>${com.github.lc.oss.owasp.version}</version>
+                            <version>${io.github.lc.oss.owasp.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>

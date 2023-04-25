@@ -5,7 +5,7 @@
 
     <groupId>io.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all io.github.locke-chappel.oss projects</description>
@@ -44,8 +44,8 @@
         <maven.compiler.source>${java.min.version}</maven.compiler.source>
 
         <!-- io.github.locke-chappel.oss -->
-        <io.github.lc.oss.commons.bom.version>1.0.2</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.version>1.0.2</io.github.lc.oss.owasp.version>
+        <io.github.lc.oss.commons.bom.version>1.0.4</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.4</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.15.0</com.fasterxml.jackson.version>

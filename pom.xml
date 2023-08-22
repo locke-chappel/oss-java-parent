@@ -5,7 +5,7 @@
 
     <groupId>io.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all io.github.locke-chappel.oss projects</description>
@@ -44,34 +44,34 @@
         <maven.compiler.source>${java.min.version}</maven.compiler.source>
 
         <!-- io.github.locke-chappel.oss -->
-        <io.github.lc.oss.commons.bom.version>1.0.6</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.version>1.0.6</io.github.lc.oss.owasp.version>
+        <io.github.lc.oss.commons.bom.version>1.0.7</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.7</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.15.2</com.fasterxml.jackson.version>
-        <com.github.mwiede.jsch.version>0.2.9</com.github.mwiede.jsch.version>
+        <com.github.mwiede.jsch.version>0.2.11</com.github.mwiede.jsch.version>
         <com.google.javascript.version>v20220719</com.google.javascript.version>
         <com.h2database.version>2.2.220</com.h2database.version>
         <com.pi4j.version>2.3.0</com.pi4j.version>
         <com.yahoo.platform.yui.version>2.4.8</com.yahoo.platform.yui.version>
         <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
-        <org.apache.commons.version>3.12.0</org.apache.commons.version>
+        <org.apache.commons.version>3.13.0</org.apache.commons.version>
         <org.apache.httpcomponents.version>5.2.1</org.apache.httpcomponents.version>
-        <org.aspectj.version>1.9.19</org.aspectj.version>
+        <org.aspectj.version>1.9.20</org.aspectj.version>
         <org.eclipse.angus.jakarta.mail.version>2.0.2</org.eclipse.angus.jakarta.mail.version>
         <org.glassfish.jaxb.version>4.0.3</org.glassfish.jaxb.version>
-        <org.graalvm.js.version>23.0.0</org.graalvm.js.version>
-        <org.hibernate.version>6.2.6.Final</org.hibernate.version>
+        <org.graalvm.js.version>23.0.1</org.graalvm.js.version>
+        <org.hibernate.version>6.2.7.Final</org.hibernate.version>
         <org.hibernate.validator.version>8.0.1.Final</org.hibernate.validator.version>
-        <org.junit.jupiter.version>5.9.3</org.junit.jupiter.version>
+        <org.junit.jupiter.version>5.10.0</org.junit.jupiter.version>
         <org.mockito.version>5.4.0</org.mockito.version>
         <org.openjfx.version>17.0.6</org.openjfx.version>
         <org.quartz-scheduler.version>2.3.2</org.quartz-scheduler.version>
-        <org.seleniumhq.selenium.version>4.10.0</org.seleniumhq.selenium.version>
-        <org.seleniumhq.selenium.htmlunit-driver.version>4.10.0</org.seleniumhq.selenium.htmlunit-driver.version>
+        <org.seleniumhq.selenium.version>4.11.0</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.htmlunit-driver.version>4.11.0</org.seleniumhq.selenium.htmlunit-driver.version>
         <org.slf4j.verion>2.0.7</org.slf4j.verion>
         <org.springframework.version>6.0.11</org.springframework.version>
-        <org.springframework.boot.version>3.1.1</org.springframework.boot.version>
+        <org.springframework.boot.version>3.1.2</org.springframework.boot.version>
         <org.springframework.security.version>6.1.2</org.springframework.security.version>
 
         <!-- Plugin Versions -->
@@ -94,7 +94,7 @@
         <org.graalvm.buildtools.native-build-tools-plugin.version>0.9.23</org.graalvm.buildtools.native-build-tools-plugin.version>
         <org.jacoco.jacoco-maven-plugin.version>0.8.10</org.jacoco.jacoco-maven-plugin.version>
         <org.ow2.asm.version>9.5</org.ow2.asm.version>
-        <org.owasp.dependency-check-maven.version>8.3.1</org.owasp.dependency-check-maven.version>
+        <org.owasp.dependency-check-maven.version>8.4.0</org.owasp.dependency-check-maven.version>
 
         <!-- Configuration -->
         <testing.skip.it>true</testing.skip.it>

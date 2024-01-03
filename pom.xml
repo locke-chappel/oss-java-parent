@@ -5,7 +5,7 @@
 
     <groupId>io.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all io.github.locke-chappel.oss projects</description>
@@ -44,58 +44,58 @@
         <maven.compiler.source>${java.min.version}</maven.compiler.source>
 
         <!-- io.github.locke-chappel.oss -->
-        <io.github.lc.oss.commons.bom.version>1.0.8</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.version>1.0.8</io.github.lc.oss.owasp.version>
+        <io.github.lc.oss.commons.bom.version>1.0.9</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.9</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
-        <com.fasterxml.jackson.version>2.15.3</com.fasterxml.jackson.version>
-        <com.github.mwiede.jsch.version>0.2.11</com.github.mwiede.jsch.version>
+        <com.fasterxml.jackson.version>2.16.1</com.fasterxml.jackson.version>
+        <com.github.mwiede.jsch.version>0.2.15</com.github.mwiede.jsch.version>
         <com.google.javascript.version>v20220719</com.google.javascript.version>
         <com.h2database.version>2.2.224</com.h2database.version>
-        <com.pi4j.version>2.3.0</com.pi4j.version>
+        <com.pi4j.version>2.4.0</com.pi4j.version>
         <com.yahoo.platform.yui.version>2.4.8</com.yahoo.platform.yui.version>
         <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
-        <org.apache.commons.version>3.13.0</org.apache.commons.version>
-        <org.apache.httpcomponents.version>5.2.1</org.apache.httpcomponents.version>
-        <org.aspectj.version>1.9.20.1</org.aspectj.version>
+        <org.apache.commons.version>3.14.0</org.apache.commons.version>
+        <org.apache.httpcomponents.version>5.2.3</org.apache.httpcomponents.version>
+        <org.aspectj.version>1.9.21</org.aspectj.version>
         <org.eclipse.angus.jakarta.mail.version>2.0.2</org.eclipse.angus.jakarta.mail.version>
         <org.glassfish.jaxb.version>4.0.4</org.glassfish.jaxb.version>
         <org.graalvm.js.version>23.0.2</org.graalvm.js.version>
-        <org.hibernate.version>6.3.1.Final</org.hibernate.version>
+        <org.hibernate.version>6.4.1.Final</org.hibernate.version>
         <org.hibernate.validator.version>8.0.1.Final</org.hibernate.validator.version>
-        <org.junit.jupiter.version>5.10.0</org.junit.jupiter.version>
-        <org.mockito.version>5.6.0</org.mockito.version>
+        <org.junit.jupiter.version>5.10.1</org.junit.jupiter.version>
+        <org.mockito.version>5.8.0</org.mockito.version>
         <!-- Note: openjfx 17.0.9 appears to have changed the artifact structure - refactoring needed -->
         <org.openjfx.version>17.0.8</org.openjfx.version>
         <org.quartz-scheduler.version>2.3.2</org.quartz-scheduler.version>
-        <org.seleniumhq.selenium.version>4.14.1</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.version>4.16.1</org.seleniumhq.selenium.version>
         <org.seleniumhq.selenium.htmlunit-driver.version>4.13.0</org.seleniumhq.selenium.htmlunit-driver.version>
-        <org.slf4j.verion>2.0.9</org.slf4j.verion>
-        <org.springframework.version>6.0.13</org.springframework.version>
-        <org.springframework.boot.version>3.1.5</org.springframework.boot.version>
-        <org.springframework.security.version>6.1.5</org.springframework.security.version>
+        <org.slf4j.verion>2.0.10</org.slf4j.verion>
+        <org.springframework.version>6.1.2</org.springframework.version>
+        <org.springframework.boot.version>3.2.1</org.springframework.boot.version>
+        <org.springframework.security.version>6.2.1</org.springframework.security.version>
 
         <!-- Plugin Versions -->
         <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
-        <maven-clean-plugin.version>3.3.1</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
-        <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
+        <maven-failsafe-plugin.version>3.2.3</maven-failsafe-plugin.version>
         <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
         <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
         <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
-        <org.cyclonedx.cyclonedx-maven-plugin.version>2.7.9</org.cyclonedx.cyclonedx-maven-plugin.version>
+        <maven-surefire-plugin.version>3.2.3</maven-surefire-plugin.version>
+        <org.cyclonedx.cyclonedx-maven-plugin.version>2.7.10</org.cyclonedx.cyclonedx-maven-plugin.version>
         <org.eclipse.m2e.lifecycle-mapping.version>1.0.0</org.eclipse.m2e.lifecycle-mapping.version>
         <org.graalvm.buildtools.native-build-tools-plugin.version>0.9.28</org.graalvm.buildtools.native-build-tools-plugin.version>
         <org.jacoco.jacoco-maven-plugin.version>0.8.11</org.jacoco.jacoco-maven-plugin.version>
         <org.ow2.asm.version>9.6</org.ow2.asm.version>
-        <org.owasp.dependency-check-maven.version>8.4.2</org.owasp.dependency-check-maven.version>
+        <org.owasp.dependency-check-maven.version>9.0.7</org.owasp.dependency-check-maven.version>
 
         <!-- Configuration -->
         <testing.skip.it>true</testing.skip.it>
@@ -238,8 +238,8 @@
                         <suppressionFiles>
                             <suppressionFile>all.xml</suppressionFile>
                         </suppressionFiles>
-                        <cveUrlBase>${owasp.cveUrlBase}</cveUrlBase>
-                        <cveUrlModified>${owasp.cveUrlModified}</cveUrlModified>
+                        <nvdApiKey>${owasp.nvdApiKey}</nvdApiKey>
+                        <nvdValidForHours>${owasp.nvdValidForHours}</nvdValidForHours>
                         <retireJsUrl>${owasp.retireJsUrl}</retireJsUrl>
                         <dataDirectory>${owasp.dataDir}</dataDirectory>
                     </configuration>

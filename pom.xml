@@ -69,7 +69,7 @@
         <org.openjfx.version>17.0.8</org.openjfx.version>
         <org.quartz-scheduler.version>2.3.2</org.quartz-scheduler.version>
         <org.seleniumhq.selenium.version>4.16.1</org.seleniumhq.selenium.version>
-        <org.seleniumhq.selenium.htmlunit-driver.version>4.13.0</org.seleniumhq.selenium.htmlunit-driver.version>
+        <org.seleniumhq.selenium.htmlunit3-driver.version>4.16.0</org.seleniumhq.selenium.htmlunit3-driver.version>
         <org.slf4j.verion>2.0.10</org.slf4j.verion>
         <org.springframework.version>6.1.2</org.springframework.version>
         <org.springframework.boot.version>3.2.1</org.springframework.boot.version>

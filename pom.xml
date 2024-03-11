@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all io.github.locke-chappel.oss projects</description>
-    <url>https://github.com/locke-chappel/oss-parent</url>
+    <url>https://github.com/locke-chappel/oss-java-parent</url>
 
     <licenses>
         <license>
@@ -92,7 +92,7 @@
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
         <org.cyclonedx.cyclonedx-maven-plugin.version>2.7.11</org.cyclonedx.cyclonedx-maven-plugin.version>
         <org.eclipse.m2e.lifecycle-mapping.version>1.0.0</org.eclipse.m2e.lifecycle-mapping.version>
-        <org.graalvm.buildtools.native-build-tools-plugin.version>0.10.0</org.graalvm.buildtools.native-build-tools-plugin.version>
+        <org.graalvm.buildtools.native-build-tools-plugin.version>0.10.1</org.graalvm.buildtools.native-build-tools-plugin.version>
         <org.jacoco.jacoco-maven-plugin.version>0.8.11</org.jacoco.jacoco-maven-plugin.version>
         <org.ow2.asm.version>9.6</org.ow2.asm.version>
         <org.owasp.dependency-check-maven.version>9.0.9</org.owasp.dependency-check-maven.version>
@@ -275,7 +275,7 @@
                             <buildArg>--no-fallback</buildArg>
                             <buildArg>--no-server</buildArg>
                             <buildArg>--verbose</buildArg>
-                            <buildArg>-J-Xmx3G</buildArg>
+                            <buildArg>-J-Xmx5G</buildArg>
                         </buildArgs>
                     </configuration>
                 </plugin>

@@ -5,7 +5,7 @@
 
     <groupId>io.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.11</version>
+    <version>1.0.12</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all io.github.locke-chappel.oss projects</description>
@@ -44,23 +44,23 @@
         <maven.compiler.source>${java.min.version}</maven.compiler.source>
 
         <!-- io.github.locke-chappel.oss -->
-        <io.github.lc.oss.commons.bom.version>1.0.11</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.version>1.0.11</io.github.lc.oss.owasp.version>
+        <io.github.lc.oss.commons.bom.version>1.0.12</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.12</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.17.0</com.fasterxml.jackson.version>
-        <com.github.mwiede.jsch.version>0.2.16</com.github.mwiede.jsch.version>
+        <com.github.mwiede.jsch.version>0.2.17</com.github.mwiede.jsch.version>
         <com.google.javascript.version>v20220719</com.google.javascript.version>
         <com.h2database.version>2.2.224</com.h2database.version>
-        <com.pi4j.version>2.4.0</com.pi4j.version>
+        <com.pi4j.version>2.5.1</com.pi4j.version>
         <com.yahoo.platform.yui.version>2.4.8</com.yahoo.platform.yui.version>
         <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
         <org.apache.commons.version>3.14.0</org.apache.commons.version>
         <org.apache.httpcomponents.version>5.3.1</org.apache.httpcomponents.version>
-        <org.aspectj.version>1.9.21.1</org.aspectj.version>
-        <org.eclipse.angus.jakarta.mail.version>2.0.2</org.eclipse.angus.jakarta.mail.version>
+        <org.aspectj.version>1.9.22</org.aspectj.version>
+        <org.eclipse.angus.jakarta.mail.version>2.0.3</org.eclipse.angus.jakarta.mail.version>
         <org.glassfish.jaxb.version>4.0.4</org.glassfish.jaxb.version>
-        <org.graalvm.js.version>23.0.3</org.graalvm.js.version>
+        <org.graalvm.js.version>23.0.4</org.graalvm.js.version>
         <org.hibernate.version>6.4.4.Final</org.hibernate.version>
         <org.hibernate.validator.version>8.0.1.Final</org.hibernate.validator.version>
         <org.junit.jupiter.version>5.10.2</org.junit.jupiter.version>
@@ -68,34 +68,34 @@
         <!-- Note: openjfx 17.0.9 appears to have changed the artifact structure - refactoring needed -->
         <org.openjfx.version>17.0.8</org.openjfx.version>
         <org.quartz-scheduler.version>2.3.2</org.quartz-scheduler.version>
-        <org.seleniumhq.selenium.version>4.18.1</org.seleniumhq.selenium.version>
-        <org.seleniumhq.selenium.htmlunit3-driver.version>4.18.1</org.seleniumhq.selenium.htmlunit3-driver.version>
-        <org.slf4j.verion>2.0.12</org.slf4j.verion>
-        <org.springframework.version>6.1.5</org.springframework.version>
+        <org.seleniumhq.selenium.version>4.19.1</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.htmlunit3-driver.version>4.19.1</org.seleniumhq.selenium.htmlunit3-driver.version>
+        <org.slf4j.verion>2.0.13</org.slf4j.verion>
+        <org.springframework.version>6.1.6</org.springframework.version>
         <org.springframework.boot.version>3.2.4</org.springframework.boot.version>
-        <org.springframework.security.version>6.2.3</org.springframework.security.version>
+        <org.springframework.security.version>6.2.4</org.springframework.security.version>
 
         <!-- Plugin Versions -->
-        <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
+        <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
         <maven-clean-plugin.version>3.3.2</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
-        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+        <maven-gpg-plugin.version>3.2.3</maven-gpg-plugin.version>
         <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
-        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+        <maven-jar-plugin.version>3.4.0</maven-jar-plugin.version>
         <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
         <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-        <org.cyclonedx.cyclonedx-maven-plugin.version>2.7.11</org.cyclonedx.cyclonedx-maven-plugin.version>
+        <org.cyclonedx.cyclonedx-maven-plugin.version>2.8.0</org.cyclonedx.cyclonedx-maven-plugin.version>
         <org.eclipse.m2e.lifecycle-mapping.version>1.0.0</org.eclipse.m2e.lifecycle-mapping.version>
         <org.graalvm.buildtools.native-build-tools-plugin.version>0.10.1</org.graalvm.buildtools.native-build-tools-plugin.version>
         <org.jacoco.jacoco-maven-plugin.version>0.8.11</org.jacoco.jacoco-maven-plugin.version>
-        <org.ow2.asm.version>9.6</org.ow2.asm.version>
-        <org.owasp.dependency-check-maven.version>9.0.10</org.owasp.dependency-check-maven.version>
+        <org.ow2.asm.version>9.7</org.ow2.asm.version>
+        <org.owasp.dependency-check-maven.version>9.1.0</org.owasp.dependency-check-maven.version>
 
         <!-- Configuration -->
         <testing.skip.it>true</testing.skip.it>

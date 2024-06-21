@@ -356,8 +356,14 @@
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
                             <image>
-                                <builder>paketobuildpacks/builder:tiny</builder>
+                            	<!-- Default Build pack config not Java 21 compatible yet -->
+                                <!--<builder>paketobuildpacks/builder:tiny</builder>-->
+                                
+                                <!-- Alternative build packs for Java 21 support -->
+                                <buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
+                            	<buildpack>gcr.io/paketo-buildpacks/bellsoft-liberica:10.4.2</buildpack>
                                 <env>
+                                    <BP_JVM_VERSION>21.0.0</BP_JVM_VERSION>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
                                 </env>
                             </image>

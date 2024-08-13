@@ -100,7 +100,7 @@
         <testing.skip.it>true</testing.skip.it>
         
         <org.graalvm.buildtools.requiredVersion>21.0</org.graalvm.buildtools.requiredVersion> <!-- minimum GraalVM JDK version -->
-        <org.graalvm.native-image.march default-value="compatibility">${env.NATIVE_IMAGE_ARCH}</org.graalvm.native-image.march>
+        <org.graalvm.native-image.march>compatibility</org.graalvm.native-image.march>
     </properties>
 
     <build>

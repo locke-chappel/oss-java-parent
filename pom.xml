@@ -100,6 +100,7 @@
         <testing.skip.it>true</testing.skip.it>
         
         <org.graalvm.buildtools.requiredVersion>21.0</org.graalvm.buildtools.requiredVersion> <!-- minimum GraalVM JDK version -->
+        <org.graalvm.native-image.march default-value="compatibility">${env.NATIVE_IMACE_ARCH}</org.graalvm.native-image.march>
     </properties>
 
     <build>
@@ -276,6 +277,7 @@
                             <buildArg>--verbose</buildArg>
                             <buildArg>--strict-image-heap</buildArg>
                             <buildArg>-J-Xmx5G</buildArg>
+                            <buildArg>-march=${org.graalvm.native-image.march}</buildArg>
                         </buildArgs>
                     </configuration>
                 </plugin>

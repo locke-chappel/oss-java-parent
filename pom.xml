@@ -47,7 +47,7 @@
 
         <!-- io.github.locke-chappel.oss -->
         <io.github.lc.oss.commons.bom.version>${project.version}</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.versionwasp.version>${project.version}</io.github.lc.oss.owasp.versionwasp.version>
+        <io.github.lc.oss.owasp.version>${project.version}</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.18.0</com.fasterxml.jackson.version>

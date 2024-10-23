@@ -60,7 +60,8 @@
         <org.aspectj.version>1.9.22.1</org.aspectj.version>
         <org.eclipse.angus.jakarta.mail.version>2.0.3</org.eclipse.angus.jakarta.mail.version>
         <org.glassfish.jaxb.version>4.0.5</org.glassfish.jaxb.version>
-        <org.graalvm.js.version>24.1.1</org.graalvm.js.version>
+        <!-- TODO Maven Central is missing 24.1.0/24.1.1 jar files, only has the pom.xml...  -->
+        <org.graalvm.js.version>23.0.6</org.graalvm.js.version>
         <org.hibernate.version>6.6.1.Final</org.hibernate.version>
         <org.hibernate.validator.version>8.0.1.Final</org.hibernate.validator.version>
         <org.junit.jupiter.version>5.11.3</org.junit.jupiter.version>

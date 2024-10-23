@@ -46,8 +46,8 @@
         <build.artifact.name>${project.artifactId}-${project.version}</build.artifact.name>
 
         <!-- io.github.locke-chappel.oss -->
-        <io.github.lc.oss.commons.bom.version>${project.version}</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.version>${project.version}</io.github.lc.oss.owasp.version>
+        <io.github.lc.oss.commons.bom.version>1.0.17</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.17</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
         <com.fasterxml.jackson.version>2.18.0</com.fasterxml.jackson.version>

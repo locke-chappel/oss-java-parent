@@ -5,7 +5,7 @@
 
     <groupId>io.github.locke-chappel.oss</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.19</version>
+    <version>1.0.21</version>
     <packaging>pom</packaging>
     <name>OSS Parent POM</name>
     <description>Parent POM for all io.github.locke-chappel.oss projects</description>
@@ -46,34 +46,35 @@
         <build.artifact.name>${project.artifactId}-${project.version}</build.artifact.name>
 
         <!-- io.github.locke-chappel.oss -->
-        <io.github.lc.oss.commons.bom.version>1.0.19</io.github.lc.oss.commons.bom.version>
-        <io.github.lc.oss.owasp.version>1.0.19</io.github.lc.oss.owasp.version>
+        <io.github.lc.oss.commons.bom.version>1.0.21</io.github.lc.oss.commons.bom.version>
+        <io.github.lc.oss.owasp.version>1.0.21</io.github.lc.oss.owasp.version>
 
         <!-- Dependency Versions -->
-        <com.fasterxml.jackson.version>2.18.2</com.fasterxml.jackson.version>
-        <com.github.mwiede.jsch.version>0.2.23</com.github.mwiede.jsch.version>
+        <com.fasterxml.jackson.version>2.19.0</com.fasterxml.jackson.version>
+        <com.github.mwiede.jsch.version>2.27.0</com.github.mwiede.jsch.version>
         <com.h2database.version>2.3.232</com.h2database.version>
-        <com.pi4j.version>2.8.0</com.pi4j.version>
+        <!-- 3.x requires Java21+ -->
+        <com.pi4j.version>3.0.1</com.pi4j.version>
         <jakarta.servlet.version>6.1.0</jakarta.servlet.version>
         <org.apache.commons.version>3.17.0</org.apache.commons.version>
-        <org.apache.httpcomponents.version>5.4.2</org.apache.httpcomponents.version>
-        <org.aspectj.version>1.9.22.1</org.aspectj.version>
+        <org.apache.httpcomponents.version>5.4.4</org.apache.httpcomponents.version>
+        <org.aspectj.version>1.9.24</org.aspectj.version>
         <org.eclipse.angus.jakarta.mail.version>2.0.3</org.eclipse.angus.jakarta.mail.version>
         <org.glassfish.jaxb.version>4.0.5</org.glassfish.jaxb.version>
         <!-- TODO Maven Central is missing 24.1.0/24.1.1 jar files, only has the pom.xml...  -->
-        <org.graalvm.js.version>23.0.6</org.graalvm.js.version>
-        <org.hibernate.version>6.6.8.Final</org.hibernate.version>
+        <org.graalvm.js.version>23.0.8</org.graalvm.js.version>
+        <org.hibernate.version>6.6.14.Final</org.hibernate.version>
         <org.hibernate.validator.version>8.0.2.Final</org.hibernate.validator.version>
-        <org.junit.jupiter.version>5.11.4</org.junit.jupiter.version>
-        <org.mockito.version>5.15.2</org.mockito.version>
-        <org.openjfx.version>21.0.5</org.openjfx.version>
+        <org.junit.jupiter.version>5.12.2</org.junit.jupiter.version>
+        <org.mockito.version>5.17.0</org.mockito.version>
+        <org.openjfx.version>21.0.7</org.openjfx.version>
         <org.quartz-scheduler.version>2.5.0</org.quartz-scheduler.version>
-        <org.seleniumhq.selenium.version>4.29.0</org.seleniumhq.selenium.version>
-        <org.seleniumhq.selenium.htmlunit3-driver.version>4.28.0</org.seleniumhq.selenium.htmlunit3-driver.version>
-        <org.slf4j.verion>2.0.16</org.slf4j.verion>
-        <org.springframework.version>6.2.3</org.springframework.version>
-        <org.springframework.boot.version>3.4.3</org.springframework.boot.version>
-        <org.springframework.security.version>6.4.3</org.springframework.security.version>
+        <org.seleniumhq.selenium.version>4.32.0</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.htmlunit3-driver.version>4.30.0</org.seleniumhq.selenium.htmlunit3-driver.version>
+        <org.slf4j.verion>2.0.17</org.slf4j.verion>
+        <org.springframework.version>6.2.6</org.springframework.version>
+        <org.springframework.boot.version>3.4.5</org.springframework.boot.version>
+        <org.springframework.security.version>6.4.5</org.springframework.security.version>
 
         <!-- Plugin Versions -->
         <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>

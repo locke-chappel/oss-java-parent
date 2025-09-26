@@ -63,8 +63,10 @@
         <org.glassfish.jaxb.version>4.0.5</org.glassfish.jaxb.version>
         <!-- TODO Maven Central is missing 24.1.0/24.1.1 jar files, only has the pom.xml...  -->
         <org.graalvm.js.version>23.0.9</org.graalvm.js.version>
-        <org.hibernate.version>7.1.1.Final</org.hibernate.version>
-        <org.hibernate.validator.version>9.0.1.Final</org.hibernate.validator.version>
+        <!-- WARNING: Hibernate 7.x breaks Spring JPA 3.x -->
+        <org.hibernate.version>6.6.29.Final</org.hibernate.version>
+        <!-- WARNING: Hibernate Validator 9.x breaks Hibernate 6.x -->
+        <org.hibernate.validator.version>8.0.3.Final</org.hibernate.validator.version>
         <org.junit.jupiter.version>5.13.4</org.junit.jupiter.version>
         <org.mockito.version>5.20.0</org.mockito.version>
         <org.openjfx.version>21.0.7</org.openjfx.version>
